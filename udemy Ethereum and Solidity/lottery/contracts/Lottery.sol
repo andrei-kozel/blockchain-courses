@@ -13,6 +13,7 @@ contract Lottery {
       players.push(msg.sender);
   }
 
+  // pseudo random function
   function ranbom() private view returns(uint) {
     return uint(keccak256(block.difficulty, now, players));
   }
