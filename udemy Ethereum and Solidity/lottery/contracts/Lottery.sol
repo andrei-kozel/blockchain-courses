@@ -24,6 +24,7 @@ contract Lottery {
     players = new address[](0);
   }
 
+  // function modifier
   modifier restricted() {
     require(msg.sender == manager);
     _;
